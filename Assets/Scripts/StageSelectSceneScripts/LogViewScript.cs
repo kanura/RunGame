@@ -31,7 +31,8 @@ public class LogViewScript : MonoBehaviour {
 
         StreamReader sr;
         FileInfo fi;
-        fi = new FileInfo(Application.dataPath + @"\Resources\scoredata.dat");
+        //fi = new FileInfo(Application.dataPath + @"\Resources\scoredata.dat");
+		fi = new FileInfo(Application.dataPath + @"/Resources/scoredata.dat");
         if (fi == null)
             return;
         sr = fi.OpenText();
@@ -197,7 +198,8 @@ namespace UnityStageScoreTest
         {
             StreamWriter sw;
             FileInfo fi;
-            fi = new FileInfo(Application.dataPath + @"\Resources\scoredata.dat");
+            //fi = new FileInfo(Application.dataPath + @"\Resources\scoredata.dat");
+			fi = new FileInfo(Application.dataPath + @"/Resources/scoredata.dat");
             sw = fi.AppendText();
 
             Hashtable dataArray = StageScoreList.getInstance().getAllScore();
